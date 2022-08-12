@@ -1,0 +1,1 @@
+# Here is the example for the Inertia Laravel controller 
