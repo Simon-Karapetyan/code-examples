@@ -1,1 +1,1 @@
-# Add text where you want word by word
+# You can add text word by word where you want
