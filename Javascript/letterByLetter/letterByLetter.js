@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const wordByWord = ( sentence ) => {
+const letterByLetter = (sentence) => {
     const [isFirstTime, setIsFirstTime] = useState(true);
     const [body, setBody] = useState('');
     let index = 0;
@@ -22,4 +22,4 @@ const wordByWord = ( sentence ) => {
     return body;
 }
 
-export default wordByWord;
+export default letterByLetter;
