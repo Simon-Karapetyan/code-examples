@@ -1,5 +1,7 @@
 <?php
 
+// Uploading file, set generated name, and set directory
+
 foreach ($_FILES as $key => $file) {
     if ($file["error"] == 0) {
         $arr = explode("/", $file["type"]);

@@ -1,5 +1,8 @@
 <?php
 
+// Here is the example for the filters in Laravel
+// And we are returning page with Inertia js
+
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Post\IndexApplicationRequest;

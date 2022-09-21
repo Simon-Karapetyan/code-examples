@@ -1,5 +1,7 @@
 <?php
 
+// Here is the example for the Inertia Laravel controller
+
 namespace App\Http\Controllers;
 
 use App\Models\Test;

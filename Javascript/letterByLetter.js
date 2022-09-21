@@ -1,3 +1,5 @@
+// You can add text letter by letter where you want
+
 import { useState } from "react";
 
 const letterByLetter = (sentence) => {
