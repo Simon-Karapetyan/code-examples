@@ -5,14 +5,14 @@
 class Test{
     public $a;
     private $b;
-	protected $c = 2;
-	static $s=2;
+    protected $c = 2;
+    static $s=2;
 
-	public function __construct($a1, $b1, $c1){ // this method runs automatically when creating new object
-		$this->setA($a1);
-		$this->setB($b1);
-		$this->setC($c1);
-	}
+    public function __construct($a1, $b1, $c1){ // this method runs automatically when creating new object
+    	$this->setA($a1);
+    	$this->setB($b1);
+    	$this->setC($c1);
+    }
 
     // here are getters and setters for our properties
     /**
@@ -20,8 +20,8 @@ class Test{
      */
     public function getA(): int
     {
-		return $this->a;
-	}
+    	return $this->a;
+    }
 
     /**
      * @param $a
@@ -29,16 +29,16 @@ class Test{
      */
     public function setA($a): void
     {
-		$this->a = $a;
-	}
+    	$this->a = $a;
+    }
 
     /**
      * @return int
      */
     public function getB(): int
     {
-		return $this->b;
-	}
+    	return $this->b;
+    }
 
     /**
      * @param $b
@@ -46,16 +46,16 @@ class Test{
      */
     public function setB($b): void
     {
-		$this->b = $b;
-	}
+    	$this->b = $b;
+    }
 
     /**
      * @return int
      */
     public function getC(): int
     {
-		return $this->c;
-	}
+    	return $this->c;
+    }
 
     /**
      * @param $c
@@ -63,16 +63,16 @@ class Test{
      */
     public function setC($c): void
     {
-		$this->c = $c;
-	}
+    	$this->c = $c;
+    }
 
     /**
      * @return int
      */
     public function getS(): int
     {
-		return self::$s; // we can have access for static properties with this way (::)
-	}
+    	return self::$s; // we can have access for static properties with this way (::)
+    }
 
     /**
      * @param $s
@@ -80,8 +80,8 @@ class Test{
      */
     public function setS($s): void
     {
-		self::$s = $s;
-	}
+    	self::$s = $s;
+    }
 
     // this is static method which is returning $s static property
     /**
@@ -89,8 +89,8 @@ class Test{
      */
     static function test(): int
     {
-		return self::$s;
-	}
+    	return self::$s;
+    }
 }
 
 
@@ -99,8 +99,8 @@ $obj = new Test(4, 5, 7); // here we are creating new object
 
 class Test1 extends Test{ // here we are extending all public, protected or static properties from Test class
     public function getTestA(){
-		return $this->a;
-	}
+    	return $this->a;
+    }
 }
 
 echo Test1::test(); // 2 -- test() is static method, that's why we can call it from class
