@@ -6,7 +6,7 @@ class Test{
     public $a;
     private $b;
     protected $c = 2;
-    static $s=2;
+    static $s = 2;
 
     public function __construct($a1, $b1, $c1){ // this method runs automatically when creating new object
     	$this->setA($a1);
@@ -69,7 +69,7 @@ class Test{
     /**
      * @return int
      */
-    public function getS(): int
+    public function getS(): int // Fatal error. We can have access to static property only with static method
     {
     	return self::$s; // we can have access for static properties with this way (::)
     }
@@ -93,10 +93,6 @@ class Test{
     }
 }
 
-
-$obj = new Test(4, 5, 7); // here we are creating new object
-
-
 class Test1 extends Test{ // here we are extending all public, protected or static properties from Test class
     public function getTestA(){
     	return $this->a;
@@ -104,6 +100,6 @@ class Test1 extends Test{ // here we are extending all public, protected or stat
 }
 
 echo Test1::test(); // 2 -- test() is static method, that's why we can call it from class
-$obj2 = new Test1(4, 15, 2); // here we are creating another object
+$obj = new Test1(4, 15, 2); // here we are creating another object
 
-echo $obj2->getTestA(); // 4 -- this public function can return property from Test class
+echo $obj->getTestA(); // 4 -- this public function can return property from Test class
