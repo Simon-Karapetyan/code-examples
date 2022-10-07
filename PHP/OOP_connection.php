@@ -49,7 +49,7 @@ class Test{
 	// query ****************************************************
 
 	public function insert(){
-		require_once "mysqliConfig.php";
+		require_once "mysqli_config.php";
 		$connection = Config::getConnect();
 		$query = 'INSERT INTO table1(name, age) VALUES ("' . $this->getName() . '", "' . $this->getAge().'")';
 
